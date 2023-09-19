@@ -10,5 +10,6 @@ Branche="${INPUT_BRANCH_NAME}"
 git config --global --add safe.directory /github/workspace
 git config --global credential.'https://git-codecommit.*.amazonaws.com'.helper '!aws codecommit credential-helper $@'
 git config --global credential.UseHttpPath true
+git fetch ${Branche} 
 git remote add sync ${CodeCommitUrl}
 git push sync ${Branche} 
