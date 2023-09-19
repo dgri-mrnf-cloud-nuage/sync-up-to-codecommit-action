@@ -11,6 +11,9 @@ inputs:
   aws_region:
     description: Region of the CodeCommit repository.
     required: true
+  branch_name:
+    description: Nom de la branche a copier dans CodeCommit.
+    required: true
 runs:
   using: 'docker'
   image: './Dockerfile'
